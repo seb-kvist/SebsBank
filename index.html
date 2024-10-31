@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebs Bank </title>
-    <script src="main.js" defer></script>
+    <script src="js/main.js" type="module"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="mainbox">
+        <h1 id="welcomeText">Welcome to Seb's Bank-E-Rhino</h1>
+        <div id="logInBox">
+            <h3>Enter your log-in credentials</h3>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password"> 
+            <button id="logInBtn">Log in!</button>
+        </div>
+
+        <div id="bankMenuBox" class="hidden">
+            <h2>What do you wish to do?</h2>
+            <button id="checkBalanceBtn">View balance</button>
+            <button id="depositBtn">Deposit money</button>
+            <button id="withdrawBtn">Withdraw money</button>
+            <button id="logOutBtn">Log out!</button>
+            <div id="balanceBox"></div>
+
+            <!--For adding and depositing-->
+            <div id="inputBox" class="hidden">
+                <p id="inputMsg"></p>
+                <input type="number" id="amountInput" placeholder="Enter your amount">
+                <button id="confirmBtn">Confirm</button>
+                <button id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+        <!--Error MSG-->    
+        <div id="messageBox"></div>
+    </div>
 </body>
 </html>
