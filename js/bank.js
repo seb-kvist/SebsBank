@@ -15,7 +15,7 @@ export class Bank {
             return false;
         }
     }
-    // Log out method. Sets the logged out to nulll
+    // Log out method. Sets the logged out user to nulll
     logout() {
         this.loggedInUser = null;
     }
