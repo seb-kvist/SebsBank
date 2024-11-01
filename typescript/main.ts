@@ -100,7 +100,7 @@ depositBtn.addEventListener("click", () => {
             inputBox.style.display = "none";
             amountInput.value = "";
         } else {
-            displayError("The deposit is an invalid amount!"); // Error handling
+            displayError("The deposit is an invalid amount!"); 
         }
     };
 });
