@@ -1,5 +1,5 @@
 .mainbox {
-    background-color: rgb(4, 69, 42);
+    background-color: rgb(4, 59, 69);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,8 +30,12 @@ body {
     font-size: large;
 }
 
+input {
+  padding: 6px 16px;
+}
+
 button {
-    background-color: #249e71; /* Green */
+    background-color: #249e71;
     border: none;
     color: white;
     padding: 6px 16px;
@@ -47,8 +51,8 @@ button {
   }
 
   button:hover {
-    background-color: #196147; /* change to your desired color */
-    color: white; /* change to your desired color */
+    background-color: #196147; 
+    color: white; 
   }
 
   #logOutBtn {
@@ -74,4 +78,8 @@ button {
 
   #inputMsg {
     font-size: large;
+  }
+
+  h2 {
+    padding-bottom: 30px;
   }

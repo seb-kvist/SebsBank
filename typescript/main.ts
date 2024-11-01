@@ -60,6 +60,20 @@ function displayError(message: string) {
     }  
 }
 
+//FUNCTION FOR SUCCESS MSG
+function displayMessage(message: string) {
+    if (messageBox) {
+        messageBox.innerHTML = message;
+        messageBox.style.color = "green";
+        messageBox.style.display = "block";
+
+        setTimeout(() => {
+            messageBox.innerHTML = "";
+            messageBox.style.display = "none"; 
+        }, 5000);
+    }
+}
+
 //Function for balance displaY
 function updateBalanceDisplay () {
     const balance = myBank.getBalance ();
@@ -79,14 +93,15 @@ depositBtn.addEventListener("click", () => {
 
     confirmBtn.onclick = () => {
         const amount = parseFloat(amountInput.value);
+        
         if (!isNaN(amount) && amount > 0) {
             myBank.deposit(amount);
-            updateBalanceDisplay();
+            displayMessage("Deposit successful."); 
             inputBox.style.display = "none";
             amountInput.value = "";
         } else {
-        displayError("The deposit is an invalid amount!"); 
-        } 
+            displayError("The deposit is an invalid amount!"); // Error handling
+        }
     };
 });
 
@@ -102,19 +117,18 @@ withdrawBtn.addEventListener("click", () => {
 
         if (!isNaN(amount) && amount > 0) {
             if (balance !== null) {
-            if (amount <= balance) {
-                myBank.withdraw(amount);
-                updateBalanceDisplay();
-                messageBox.innerHTML = "";
-            } else {
-                displayError("Not enough money to withdraw");
-            }
-            inputBox.style.display = "none";
-            amountInput.value = "";
+                if (amount <= balance) {
+                    myBank.withdraw(amount);
+                    displayMessage("Withdrawal successful.");
+                    inputBox.style.display = "none";
+                    amountInput.value = "";
+                } else {
+                    displayError("Not enough money to withdraw.");
+                }
+            } 
         } else {
-        displayError("Invalid amount!");
+            displayError("Invalid amount!");
         }
-      }
     };
 });
 
