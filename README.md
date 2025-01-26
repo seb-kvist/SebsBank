@@ -1,63 +1,55 @@
-SebsBank Console Application
-Overview
+# SebsBank Typescript Application
+## Overview
 
-SebsBank är en enkel bankapplikation byggd med TypeScript, där användare kan logga in, se sitt saldo, sätta in och ta ut pengar. Applikationen använder objektorienterad programmering (OOP) med egna klasser för att hantera bankoperationer. Programmet innehåller en meny med olika val där användaren kan interagera med sitt konto och se sina transaktioner.
-Key Features:
+SebsBank is a simple bank application built with TypeScript, where users can log in, check their balance, deposit and withdraw money. The application uses object-oriented programming (OOP) with custom classes to handle banking operations. The program features a menu with various options where users can interact with their account and view their transactions..
 
-    Användarinloggning: Möjlighet att logga in med användarnamn och lösenord. För teständamål finns en standardanvändare med användarnamn "test" och lösenord "test".
-    Saldo: Visa aktuell saldo.
-    Insättning och Uttag: Möjlighet att sätta in eller ta ut pengar från kontot.
-    Meny: En meny som ger användaren fyra alternativ:
-        Se saldo
-        Sätt in pengar
-        Ta ut pengar
-        Avsluta
-    Programflöde: Efter varje val i menyn visas den igen för att tillåta flera interaktioner tills användaren väljer att avsluta.
+### Key Features:
 
-Files:
+- User Login: Ability to log in with a username and password. For testing purposes, there is a default user with the username "test" and password "test."
+- Balance: View the current balance.
+- Deposit and Withdrawal: Ability to deposit or withdraw money from the account.
+- Menu: A menu that presents the user with four options:
+    View balance
+    Deposit money
+    Withdraw money
+    Exit
+- Program Flow: After each option is selected, the menu reappears, allowing for multiple interactions until the user decides to exit.
 
-    index.ts: Huvudfilen för applikationen som innehåller programflödet och hanterar användarinteraktion.
-    SebsBank.ts: Fil för bankklassen som hanterar banklogik och kontoinformation.
-    User.ts: Fil för användarklassen som hanterar inloggning och användardata.
-    sebBankApp.tsproj: TypeScript-projektfil.
 
-Installation
+## Installation
 
-    Klona detta repository:
+1. Clone this repository:
+```
+git clone https://github.com/seb-kvist/Cities-Countries.git](https://github.com/seb-kvist/SebsBank.git
+```
 
-git clone <repository-url>
-
-    Navigera till projektmappen:
-
+2. Navigate to the project folder:
+```
 cd SebsBank
+```
 
-    Installera alla nödvändiga beroenden:
-
+3. Install all necessary dependencies:
+```
 npm install
-
-    Bygg och kör applikationen:
-
+```
+4. Build and run the application:
+```
 npm start
+```
 
-Usage
+## Usage
 
-    När du startar programmet kommer du att uppmanas att logga in med användarnamn och lösenord. För teständamål kan du använda "test" som både användarnamn och lösenord.
-    Efter inloggning kommer du att mötas av en meny med följande alternativ:
-        Se saldo - Visa det aktuella saldot på ditt konto.
-        Sätt in pengar - Ange beloppet du vill sätta in på kontot.
-        Ta ut pengar - Ange beloppet du vill ta ut från ditt konto (måste vara mindre än eller lika med saldo).
-        Avsluta - Avsluta programmet och logga ut användaren.
-    Efter varje val, förutom "Avsluta", kommer menyn att visas igen för ytterligare val.
+- When you start the program, you will be prompted to log in with a username and password. For testing purposes, you can use "test" as both the username and password.
+- After logging in, you will be presented with a menu with the following options:
+    View balance - Show the current balance in your account.
+    Deposit money - Enter the amount you want to deposit into your account.
+    Withdraw money - Enter the amount you want to withdraw from your account (must be less than or equal to the balance).
+    Exit - Exit the program and log out the user.
+- After each selection, except for "Exit," the menu will be displayed again for further choices.
+  
+## Technologies Used
 
-Development
-
-För att ändra eller utöka funktionaliteten i applikationen kan du:
-
-    Modifiera index.ts för att ändra hur menyn och användarinteraktionen hanteras.
-    Ändra SebsBank.ts för att lägga till fler bankfunktioner eller modifiera existerande logik.
-    Redigera User.ts för att uppdatera inloggningssystemet eller lägga till fler användarklasser.
-
-Technologies Used
-
-    TypeScript
-    Node.js
+- TypeScript
+- JavaScript 
+- HTML
+- CSS
